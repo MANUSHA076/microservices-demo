@@ -25,3 +25,9 @@ jobs:
       - name: Build booking-service
         run: mvn -B package
         working-directory: booking-service
+
+      - name: Build user-service Docker image
+        run: docker build -t user-service ./user-service
+
+      - name: Build booking-service Docker image
+        run: docker build -t booking-service ./booking-service
